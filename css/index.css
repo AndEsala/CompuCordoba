@@ -1,0 +1,500 @@
+/* 
+
+Proyecto: Página Web de Computadores de Córdoba;
+Hoja de Estilos de la Página Principal;
+Autor: Andrés Esala;
+
+ */
+ html{
+ 	box-sizing: border-box;
+ }
+ *, *:before, *:after{
+ 	box-sizing: inherit; 
+ }
+div.container,
+div.contenedor{
+	max-width: 1366px;
+}
+div.container{
+	width: 100%;
+	margin: 15px auto;
+}
+div.contenedor{
+	width: 95%;
+	margin: 20px auto;
+}
+li{
+	list-style: none;
+}
+h1, h2, h3, h4, h5{
+	text-align: center;
+}
+h6{
+	padding: 0;
+	font-weight: bold;
+	margin-bottom: 0px;
+	font-family: "PT Sans", sans-serif;
+}
+
+
+/* Header de Bienvenida */
+div.header{
+ 	width: 100%;
+ 	color: white;
+ 	display: flex;
+	padding: 10px 15px;
+	padding-bottom: 0px;
+ 	background-color: rgba(252, 2, 2, 1);
+ }
+div.message-wel,
+div.welcome{
+	flex: 0 0 50%;
+}
+div.welcome{
+	display: flex;
+	justify-content: flex-end;
+}
+.bandera{
+ 	width: 20px;
+}
+.fa-grip-lines-vertical{
+	margin: 0px 5px;
+}
+div.button-sc a{
+	margin: 0;
+}
+
+@media (max-width: 886px){
+	p.ubication,
+	div.line {
+		display: none !important;
+	}
+}
+
+/* Espacio de las Marcas y el Logo */
+div.logo-marcas{
+	width: 100%;
+	display: flex;
+}
+div.logo,
+img.img-logo{
+	width: 100%;
+}
+div.logo{
+	padding: 10px;
+}
+div.marcas{
+	display: none;
+}
+
+@media (min-width: 780px){
+	div.logo,
+	div.marcas{
+		flex: 0 0 50%;
+	}
+	img.img-logo{
+		width: 100%;
+		margin: 0px 5px;
+	} 
+
+	div.marcas{
+		display: flex;
+		justify-content: space-around;
+	}
+	.marca{
+		margin: auto;
+		flex: 0 0 calc(25% - 1rem);
+	}
+	.marca img{
+		max-width: 100%;
+	}
+}
+
+
+/* Banda de Trabajos y Marcas de Referencia */
+.header-works{
+	display: none;
+}
+
+@media (min-width: 992px){
+	.header-works{
+		width: 100%;
+		display: flex;
+		margin-top: 0;
+	}
+	.message-marcas,
+	.works{
+		display: flex;
+		flex: 0 0 50%;
+		font-weight: bold;
+		padding: 5px 10px;
+		text-transform: uppercase;
+	}
+	.works{
+		color: white;
+		background-color: red;
+		justify-content: space-between;
+	}
+	.message-marcas{
+		color: red;
+		justify-content: center;
+		background-color: yellow;
+	}
+}
+
+/* Carousel */
+div.carousel{
+	margin: auto;
+	max-width: 1366px;
+	background-color: black;
+}
+
+
+/* Zona de Productos en Descuentos */
+@media (max-width: 780px) {
+	aside.pro-lineas{
+		width: 100%;;
+		padding: 10px 20px;
+		background-color: #EFE1DC;
+	}
+	div.div-lineas{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	.img-p{
+		flex: 0 0 25%;
+	}
+
+	nav.movil-nav{
+		cursor: pointer;
+		padding: 5px 10px;
+		border-radius: 5px;
+		border: 1px solid red;
+	}
+}
+
+
+/* Lineas de los Productos y Productos en Descuento */
+ul.lineas{
+	padding: 5px;
+	display: none;
+	list-style: none;
+}
+ul.lineas li.linea{
+	width: 100%;
+	display: block;
+	font-size: 13px;
+	margin-bottom: 5px;
+}
+li.linea a{
+	color: red;
+	width: 100%;
+	padding: 5px 3px;
+	border-radius: 5px;
+	display: inline-block;
+	border: 1px solid red;
+}
+li.linea a:hover{
+	color: white;
+	text-decoration: none;
+	background-color: #BA0909;
+
+	transition: all 0.3s ease;
+}
+@media (min-width: 330px){
+	div.line-aside{
+		display: none;
+	}
+	ul.lineas,
+	li.linea{
+		display: block;
+	}
+}
+@media (min-width: 768px){
+	ul.lineas{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	li.linea{
+		margin: auto;
+		flex: 0 0 calc(33.3% - 1rem);
+	}
+}
+
+@media (min-width: 992px){
+	div.productos-descuento{
+		display: flex;
+		justify-content: space-between;
+	}
+	aside.pro-lineas{
+		margin: 10px;
+		width: 265px;
+		padding: 5px;
+		height: 100%;
+		padding-bottom: 0;
+		border-radius: 10px;
+
+		box-shadow: 0 0 10px gray;
+	}
+	div.line-aside{
+		display: block !important;
+	}
+	ul.lineas{
+		width: 100%;
+		display: block !important;
+	}
+	li.linea{
+		width: 100%;
+		display: block;
+	}
+
+	nav.movil-nav{
+		display: none;
+	}
+}
+
+/* Productos en Descuento */
+/* Productos */
+.pro-descuento {
+	width: 100%;
+	padding: 10px;
+}
+
+div.pro-descuento div.card {
+	display: flex;
+	max-height: 100%;
+}
+
+div.pro-descuento div.card .card-img-top {
+	height: 160px;
+	display: block;
+	max-width: 50%;
+	margin: 10px auto;
+}
+
+div.pro-descuento div.card div.title {
+	width: 100%;
+	height: 50px;
+	padding: 0 10px;
+}
+
+div.pro-descuento div.card h5.card-title {
+	text-align: center;
+}
+
+p.p-normal span {
+	color: red;
+	text-decoration: line-through;
+}
+
+p.p-descuento span {
+	color: green;
+}
+
+
+@media (min-width: 620px) {
+	.pro-descuento {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	div.pro-descuento div.card {
+		margin: 0 auto;
+		flex: 0 0 calc(50% - 1rem);
+	}
+
+	div.pro-descuento div.card div.title {
+		height: 60px;
+	}
+}
+
+@media (min-width: 992px) {
+	div.pro-descuento div.card {
+		height: 425px;
+		flex: 0 0 calc(33.3% - 1rem);
+	}
+}
+
+
+
+
+/* Página de Detalles de los Productos */
+div.pedido{	
+	margin: 25px auto;
+}
+.card-detalles{ 
+	text-align: center;
+	margin-bottom: 25px;
+}
+.card-detalles img{
+	width: 250px;
+}
+
+/* Formulario */
+.form-pedido{
+	height: 100%;
+	padding: 15px 20px;
+	border-radius: 10px;
+	border: 1px solid #E1E1E1;
+	box-shadow: 0 0 15px gray;
+}
+div.precios{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+div.buttons button{
+	width: 100%;
+}
+
+@media (min-width: 1000px){
+	div.pedido{
+		display: flex;
+		max-width: 100%;
+		justify-content: space-between;
+	}
+	.card-detalles,
+	.form-pedido{
+		flex-direction: column;
+		flex: 0 0 calc(50% - 1rem);
+	}
+	.card-detalles img{
+		width: 400px;
+		padding: 25px;
+
+		transition: all 0.5s ease;
+	}
+	.card-detalles img:hover{
+		transform: scale(1.1);
+	}
+}
+
+
+/* Total a Pagar */
+div.totalPagar{
+	max-width: 100%;
+	font-weight: bold;
+	margin: 10px auto;
+	padding: 5px 10px;
+	text-align: center;
+}
+
+h3.title-pedido{
+	margin: 0 auto;
+	color: #353535;
+	text-align: center;
+	text-transform: uppercase;
+}
+div.result{
+    color: white;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+div.correct{
+    background-color: rgb(2, 173, 2);
+}
+div.error{
+    background-color: red;
+}
+a.return{
+	color: #212529;
+	padding: 5px 10px;
+	font-weight: bold;
+	border-radius: 10px;
+	background-color: #DBDBDB;
+}
+a.return:hover{
+	text-decoration: none;
+}
+pre{
+	font-size: 0.85rem;
+	font-family: "PT Sans";
+}
+
+
+.name-line{
+	margin-top: 10px;
+	text-align: center;
+}
+
+
+/* Footer y parte Final del CSS */
+footer{
+	width: 100%;	
+	text-align: center;
+	background-color: #F7F7F7;
+}
+div.informacion{
+	display: flex;
+	padding: 10px;
+	justify-content: space-around;
+} 
+div.info{
+	flex: 0 0 calc(33.3% - 1rem);
+}
+div.info p.info-add{
+	margin-bottom: 5px;
+}
+div.social-media a{
+	color: #DBDBDB;
+
+	transition: color 0.3s ease;
+}
+div.social-media a:hover{
+	color: #FC0202;
+}
+div.social-media a i{
+	font-size: 40px;
+	margin: 0 5px;
+}
+div.copy{
+	display: block;
+	padding: 5px 0;
+	background-color: #DBDBDB;
+}
+div.copy p{
+	margin: 0;
+	padding: 0;
+}
+@media (max-width: 580px){
+	div.informacion,
+	div.info{
+		display: block;
+	}
+}
+
+
+/* Formulario para realizar el Pedido: Carrito de Compras */
+table.table {
+	width: 100%;
+	overflow: hidden;
+}
+form.orden {
+	width: 100%;
+	display: block;
+}
+form.orden div.form-group {
+	display: block;
+}
+form.orden div.form-group label,
+form.orden div.form-group input {
+	width: 100%;
+	display: block;
+}
+
+@media (min-width: 992px) {
+	form.orden {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	form.orden div.form-group {
+		display: block;
+		margin: 10px auto;
+		flex: 0 0 calc(25% - 1rem);
+	}
+}

@@ -1,0 +1,250 @@
+/*
+
+Página: Computadores de Córdoba;
+Hoja de Estilos de la Zona de Administración;
+Autor: Andrés Felipe Esala Muñoz;
+
+*/
+
+
+/* Zona de Administrador */
+	/* Header - Admin */
+header.h-admin{
+	width: 100%;
+	height: 60px;
+	display: flex;
+}
+
+div.logo-admin{
+	width: 260px;
+	height: 60px;
+	display: none;
+	position: absolute;
+	background-color: #343A40;
+
+	transition: all 0.5s ease;
+}
+
+
+div.container{
+	margin: 0;
+	width: 100%;
+	display: flex;
+	padding: 8px 20px;
+	align-items: center;
+}
+a.logo-index{
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+div.logo-admin img.logow{
+	max-width: 45px;
+	max-height: 40.3px; 
+}
+header.h-admin h3{
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-size: 25px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+
+	/* Main - Header */
+div.main-header{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	display: flex;
+}
+@media only screen and (max-width: 780px){
+	div.main-header div.ancles{
+		margin: 0 20px;
+	}
+}
+
+@media only screen and (min-width: 781px){
+	div.main-header{
+		margin-left: 260px;
+		flex: 0 0 calc(100% - 260px);
+	}
+}
+
+
+	/* Movil Nav */
+div.main-header nav.movil-nav-admin{
+	border: none;
+}
+nav.movil-nav-admin span{
+	background-color: #343A40;
+}
+
+
+
+	/* Aside */
+aside.aside-admin{
+	z-index: 1;
+	width: 260px;
+	position: fixed;
+	overflow-y: auto;
+	background-color: #343A40;
+	height: calc(100vh - 60px);
+
+	transition: all 0.5s ease;
+}
+@media only screen and (max-width: 780px){
+	aside.aside-admin{
+		display: none;
+		position: absolute;
+	}
+}
+@media only screen and (min-width: 781px){
+	div.logo-admin{
+		position: fixed;
+		display: flex !important;
+	}	
+	aside.aside-admin{
+		display: block !important;
+	}
+}
+div.data-user,
+div.options{
+	padding: 10px;
+	display: block;
+}
+div.data-user{
+	border-top: 1px solid #4B545C;
+	border-bottom: 1px solid #4B545C;
+}
+
+/* Estilos de los Button.main */
+.button{
+	width: 100%;
+	border: none;
+	display: flex;
+	margin: 5px 0;
+	color: white;
+	font-size: 18px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	align-items: center;
+	text-decoration: none;
+	border: 1px solid #23272B;
+	background-color: #23272B;
+
+	transition: color, background-color 0.5s ease;
+}
+.button:hover{
+	color: white;
+	cursor: pointer;
+	text-decoration: none;
+	background-color: #343A40;
+}
+.button p,
+.button i{
+	margin: 0;
+	padding: 0;
+}
+.button i{
+	margin: 0px 5px;
+}
+div.dropdown{
+	padding: 5px;
+	display: none;
+	border-radius: 5px;
+	background-color: #23272B;
+}
+div.dropdown button.button:hover{
+	background-color: #343A40;
+}
+
+.aside-admin::-webkit-scrollbar {
+    width: 0px;
+}
+
+
+
+/* Main Section */
+section.main{
+	left: 260px;
+	height: auto;	
+	padding: 20px;
+	flex-wrap: wrap;
+	position: relative;
+	display: inline-flex;
+	width: calc(100% - 260px);
+	background-color: #F4F6F9;
+	height: calc(100% - 60px);
+	font-family: 'Source Sans Pro', sans-serif;
+}
+@media only screen and (max-width: 780px){
+	section.main{
+		left: 0;
+		width: 100%;
+	}
+}
+section.main div.card-admin{
+	width: 300px;
+	margin: auto;
+	color: white;
+	border-radius: 10px;
+}
+div.c-body{
+	margin: 0;
+	display: flex;
+	padding: 10px;
+	justify-content: space-between;
+}
+div.info-left{
+	flex: 0 0 75%;
+}
+i.icon-right{
+	flex: 0 0 25%;
+}
+div.info-left h1{
+	margin: 0;
+	font-size: 30px;	
+	font-weight: bold;
+}
+div.info-left p{
+	margin: 0;
+	font-size: 20px;
+}
+i.icon-right{
+	color: white;
+	font-size: 60px;
+	text-align: center;
+}
+div.card-footer{
+	padding: 5px;
+	text-align: center;
+}
+div.card-footer a.a-card{
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* Estilo de los Formularios de Creación y Edición */
+section.main form{
+	width: 100%;
+}
+
+/* Login */
+div.login{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	background-color: #F4F6F9;
+}
+div.form-login{
+	margin: auto;
+	padding: 20px;
+	display: block;
+	border-radius: 8px;
+	background-color: white;
+	box-shadow: 0 0 10px gray;
+}
