@@ -1,7 +1,7 @@
 <?php
 	require 'paypal/autoload.php';
 
-	define('Url_Site', 'http://localhost/CompuCord');
+	define('Url_Site', 'https://andesala.herokuapp.com');
 
 	$apiContext = new \PayPal\Rest\ApiContext(
 		new \PayPal\Auth\OAuthTokenCredential(
